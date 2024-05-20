@@ -3,7 +3,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getProductList = createAsyncThunk('products/getPgetProductList', async (category) => {
-  let url = ` https://my-json-server.typicode.com/songsu218/shoptest/products`;
+  let url = `https://my-json-server.typicode.com/songsu218/shoptest/products`;
   if (category) {
     url += `?category=${category}`;
   }

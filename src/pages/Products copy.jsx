@@ -27,12 +27,12 @@ const Products = () => {
 
   const getProductList = async () => {
     // id가 일치하는 상품 가져오기
-    let url = `https://my-json-server.typicode.com/songsu218/shoptest/products/${id}`;
+    let url = `http://localhost:4000/products/${id}`;
     let respons = await fetch(url);
     let data = await respons.json();
     setProducts(data);
 
-    let url2 = `https://my-json-server.typicode.com/songsu218/shoptest/products?category=${data.category}`;
+    let url2 = `http://localhost:4000/products?category=${data.category}`;
     let respons2 = await fetch(url2);
     let data2 = await respons2.json();
     setSimilarList(data2);
